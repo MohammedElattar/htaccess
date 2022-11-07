@@ -22,6 +22,6 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 ```apacheconf
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [R=301,L]
+RewriteRule ^ %good [R=301,L]
 
 ```
