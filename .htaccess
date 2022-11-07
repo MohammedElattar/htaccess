@@ -10,3 +10,6 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URL}/htaccess/main.php
     Header always set Strict-Transport-Security "max-age:10000000;in"
 </ifModule>
 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
