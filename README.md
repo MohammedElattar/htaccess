@@ -11,13 +11,13 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 # it's also recommended to enable HTTPS Strict Transport Security (HSTS)
 
-## which help to prevent man-in-the-middle attack and force all connection in http to secure protocol https
+# which help to prevent man-in-the-middle attack and force all connection in http to secure protocol https
 
  Header always set Strict-Transport-Security "max-age=31536000;includeSubDomains"
 
 ```
 
-# Redirect back slashes in the end of url if the link is not a directory
+## Redirect back slashes in the end of url if the link is not a directory
 
 ```apacheconf
 RewriteCond %{REQUEST_FILENAME} !-d
