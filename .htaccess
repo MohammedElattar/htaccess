@@ -1,0 +1,12 @@
+# force HTTPS
+
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URL}/htaccess/main.php
+
+# it's recommended to enable HTTPS Strict Transport Security (HSTS) To prevent man in the middle attack
+
+<ifModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age:10000000;in"
+</ifModule>
+
