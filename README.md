@@ -7,7 +7,7 @@ That will check if `HTTPS` off and redirect every single Character and any numbe
 ```apacheconf
 RewriteEngine On
 RewriteCond %{HTTPS} !on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URL}/htaccess/main.php
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 # it's also recommended to enable HTTPS Strict Transport Security (HSTS)
 
